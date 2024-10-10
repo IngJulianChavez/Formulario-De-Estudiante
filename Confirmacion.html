@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Registro</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡La información ha sido registrada correctamente!</h1>
+        <!-- Mostrar la URL con los datos enviados -->
+        <p>Datos enviados:</p>
+        <p id="datos-enviados"></p>
+        
+        <a href="index.html" class="button">Volver al formulario</a>
+    </div>
+
+    <script>
+        // Tomar parámetros de la URL y se muestra en la página
+        const params = new URLSearchParams(window.location.search);
+        let datos = '';
+        params.forEach((value, key) => {
+            datos += `<strong>${key}:</strong> ${value}<br>`;
+        });
+        document.getElementById('datos-enviados').innerHTML = datos;
+    </script>
+</body>
+</html>
