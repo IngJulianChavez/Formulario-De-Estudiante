@@ -1,0 +1,91 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00b3b3, #f0f0f0, #00b3b3); /* Degradado en los lados */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% del alto */
+    overflow: auto; /* Permitir el scroll si es necesario */
+}
+
+/* Contenedor del formulario */
+.container {
+    width: 100%;
+    max-width: 600px; /* Máximo ancho para pantallas grandes */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50; /* Borde alrededor del formulario */
+    box-sizing: border-box; /* esto asegura que el padding se incluya en el ancho total */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas de los campos */
+label {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Entradas y selección */
+input, select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Asegurar que el input ocupe todo el ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Área de texto */
+textarea {
+    resize: vertical;
+}
+
+/* Botón de registro */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%; /* Asegurar que el botón ocupe todo el ancho disponible */
+}
+
+/* Efecto hover en el botón */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Para pantallas pequeñas, reducir márgenes y padding */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input, select, textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+    }
+}
